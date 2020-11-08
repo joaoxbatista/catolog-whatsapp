@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="overflow-y-scroll h-screen py-10">
+    <Catalog />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import Catalog from "./components/Catalog.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Catalog
+  },
+  beforeMount() {
+    document.title = "Cantinho da Mi";
   }
 };
 </script>
 
 <style lang="scss">
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: linear-gradient(#fff, rgb(255, 193, 227));
 }
 </style>
